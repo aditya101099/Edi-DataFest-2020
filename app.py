@@ -1,7 +1,6 @@
 import pandas as pd
 import glob
 import plotly.graph_objs as go 
-import webbrowser
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -9,8 +8,8 @@ from dash.dependencies import Input, Output
 import plotly
 import plotly.express as px
 import numpy as np
-from datetime import datetime
-import os
+from random import randint
+import flask
 
 # plt.style.use('dark_background')
 
@@ -67,7 +66,7 @@ server = flask.Flask(__name__)
 server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
 
 app = dash.Dash(
-	__name__, meta_tags=[{"name": "viewport", "content": "width=device-width"}]
+	__name__, meta_tags=[{"name": "viewport", "content": "width=device-width"}], server=server
 )
 
 app.layout = html.Div(children=[
@@ -160,7 +159,7 @@ def analysis_out(selected_dropdown_value):
 
 #--- INITIALIZE SERVER ------ 
 if __name__ == '__main__':
-	app.server.run(debug=False)
+	app.server.run(debug=True, threaded=True)
 	
 
 # 
