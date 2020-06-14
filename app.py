@@ -8,8 +8,6 @@ from dash.dependencies import Input, Output
 import plotly
 import plotly.express as px
 import numpy as np
-from random import randint
-import flask
 
 # plt.style.use('dark_background')
 
@@ -62,12 +60,11 @@ def get_options(list_terms):
 
 # ---- NEW APP LOGIC ----- #
 
-server = flask.Flask(__name__)
-server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
 
 app = dash.Dash(
 	__name__, meta_tags=[{"name": "viewport", "content": "width=device-width"}], server=server
 )
+server = app.server
 
 app.layout = html.Div(children=[
 	html.Div(className='row', # Define the row element
@@ -159,7 +156,7 @@ def analysis_out(selected_dropdown_value):
 
 #--- INITIALIZE SERVER ------ 
 if __name__ == '__main__':
-	app.server.run(debug=True, threaded=True)
+	app.run_server(debug=True)
 	
 
 # 
