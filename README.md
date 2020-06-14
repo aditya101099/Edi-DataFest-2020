@@ -2,6 +2,7 @@
 Team Phoenix's submission for the COVID Edinburgh DataFest
 
 **Team Name:** Phoenix 
+
 **Names of team members:** [Aditya Rudrapatna](https://www.linkedin.com/in/aditya-r-0ab3b277/), [Lauryn Mwale](https://www.linkedin.com/in/lauryn-mwale-959889182/), [Mark Kleyner](https://www.linkedin.com/in/markkleyner/), [Nia Indigo Allen-Cooper](https://www.linkedin.com/in/nia-allen-cooper/)
 
 We've built a beautiful web app where you can experience our submission. Check it out [here](https://phoenix-datafest.herokuapp.com)
@@ -37,7 +38,7 @@ This visualization runs on Python, with a backend powered by Dash by Plotly. The
 
 ## Usage
 
-You can access the web app with the link at the top of this page, or you can run it on your own system. 
+You can access the web app with the link at [the top of this page](https://github.com/aditya101099/Edi-DataFest-2020#edi-datafest-2020), or you can run it on your own system. 
 
 To use this on your own system, you need to download Dash, by Plotly. Instructions on how to do so are [here](https://dash.plotly.com/installation). Then, run ___app.py___ as you would run any other Python script. To view the visualization, simply then navigate to http://127.0.0.1:8050 in the browser of your choice. The server will remain active insofar as the Terminal window is not deactivated.
 
