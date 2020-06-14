@@ -61,9 +61,7 @@ def get_options(list_terms):
 # ---- NEW APP LOGIC ----- #
 
 
-app = dash.Dash(
-	__name__, meta_tags=[{"name": "viewport", "content": "width=device-width"}], server=server
-)
+app = dash.Dash(__name__, meta_tags=[{"name": "viewport", "content": "width=device-width"}])
 server = app.server
 
 app.layout = html.Div(children=[
