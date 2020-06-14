@@ -37,7 +37,7 @@ temp = temp.reset_index()
 temp = temp.rename(columns={"level_1":"Term",0:"Relative Search Interest Index Score"})
 master_df = temp.copy(deep=True)
 master_df = master_df.set_index("Day")
-print(master_df)
+
 # for col in dfs['Business/Marketing'].columns:
 # 	print(col)
 # -- All analyses follow below -- #
@@ -154,7 +154,7 @@ def analysis_out(selected_dropdown_value):
 
 #--- INITIALIZE SERVER ------ 
 if __name__ == '__main__':
-	app.run_server(debug=True)
+	app.run_server(debug=False)
 	
 
 # 
